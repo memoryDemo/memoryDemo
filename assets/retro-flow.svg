@@ -1,0 +1,29 @@
+<svg width="1280" height="360" viewBox="0 0 1280 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">memoryDemo workflow signal map</title>
+  <desc id="desc">A refined neon signal route showing the workflow from input to shipped system.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="360" gradientUnits="userSpaceOnUse"><stop stop-color="#fff8ef"/><stop offset="1" stop-color="#eee5da"/></linearGradient>
+    <linearGradient id="ink" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#151622"/><stop offset=".6" stop-color="#080b14"/><stop offset="1" stop-color="#120d17"/></linearGradient>
+    <filter id="shadow" x="-10%" y="-15%" width="120%" height="130%"><feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#000" flood-opacity=".22"/></filter>
+    <filter id="cyan" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="3" result="b"/><feColorMatrix in="b" type="matrix" values="0 0 0 0 0 0 .9 0 0 .9 0 0 1 0 1 0 0 0 .7 0"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <style>.mono{font-family:"SFMono-Regular","Cascadia Mono","Liberation Mono","Consolas",monospace}.label{font-size:18px;font-weight:800;letter-spacing:4px}.node{font-size:20px;font-weight:900;letter-spacing:1px}@keyframes route{from{stroke-dashoffset:0}to{stroke-dashoffset:-180}}@keyframes pulse{0%,100%{opacity:.6}50%{opacity:1}}.route{stroke-dasharray:18 14;animation:route 6.5s linear infinite}.pulse{animation:pulse 2.2s ease-in-out infinite}</style>
+  </defs>
+  <rect width="1280" height="360" fill="url(#bg)"/>
+  <rect x="88" y="46" width="1104" height="268" rx="26" fill="url(#ink)" filter="url(#shadow)"/>
+  <text x="128" y="106" class="mono label" fill="#fff7ec">SIGNAL ROUTE</text>
+  <text x="1138" y="106" text-anchor="end" class="mono label" fill="#62e6ef">NO. 04</text>
+  <path d="M186 204C306 112 400 290 520 204C640 118 742 290 864 204C970 130 1040 172 1102 118" stroke="#62e6ef" stroke-width="4" class="route" filter="url(#cyan)"/>
+  <path d="M186 228C306 136 400 314 520 228C640 142 742 314 864 228C970 154 1040 196 1102 142" stroke="#df1837" stroke-width="3" class="route"/>
+  <g class="mono">
+    <g class="pulse"><rect x="130" y="166" width="140" height="72" rx="10" fill="#fff7ec"/><text x="200" y="209" text-anchor="middle" class="node" fill="#11131d">INPUT</text></g>
+    <g class="pulse"><rect x="396" y="166" width="150" height="72" rx="10" fill="#df1837"/><text x="471" y="209" text-anchor="middle" class="node" fill="#fff7ec">MODEL</text></g>
+    <g class="pulse"><rect x="658" y="166" width="150" height="72" rx="10" fill="#fff7ec"/><text x="733" y="209" text-anchor="middle" class="node" fill="#11131d">TOOLS</text></g>
+    <g class="pulse"><rect x="920" y="166" width="170" height="72" rx="10" fill="#18d4ea"/><text x="1005" y="209" text-anchor="middle" class="node" fill="#11131d">SYSTEM</text></g>
+  </g>
+  <g class="mono" font-size="15" font-weight="800" letter-spacing="1.2" fill="#fff7ec" opacity=".82">
+    <text x="200" y="270" text-anchor="middle">prompt / brief</text>
+    <text x="471" y="270" text-anchor="middle">reason / select</text>
+    <text x="733" y="270" text-anchor="middle">execute / observe</text>
+    <text x="1005" y="270" text-anchor="middle">verify / ship</text>
+  </g>
+</svg>

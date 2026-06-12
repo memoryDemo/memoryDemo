@@ -1,0 +1,26 @@
+<svg width="1280" height="380" viewBox="0 0 1280 380" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">memoryDemo boot screen and identity card</title>
+  <desc id="desc">Two refined retro panels showing terminal boot text and profile identity.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="380" gradientUnits="userSpaceOnUse"><stop stop-color="#fff8ef"/><stop offset="1" stop-color="#eee5da"/></linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#131522"/><stop offset=".6" stop-color="#090c16"/><stop offset="1" stop-color="#100c16"/></linearGradient>
+    <pattern id="mosaic" width="96" height="96" patternUnits="userSpaceOnUse"><rect width="96" height="96" fill="#fff8ef"/><rect width="24" height="24" fill="#df1837" fill-opacity=".08"/><rect x="24" width="24" height="24" fill="#c8c0b5" fill-opacity=".34"/><rect x="72" y="72" width="24" height="24" fill="#df1837" fill-opacity=".12"/></pattern>
+    <filter id="shadow" x="-10%" y="-20%" width="120%" height="140%"><feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#000" flood-opacity=".2"/></filter>
+    <style>
+      .mono{font-family:"SFMono-Regular","Cascadia Mono","Liberation Mono","Consolas",monospace}.cn{font-family:"PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif}
+      .label{font-size:18px;font-weight:800;letter-spacing:4px}.term{font-size:25px;letter-spacing:.8px}
+      @keyframes cursor{0%,48%{opacity:1}49%,100%{opacity:0}}.cursor{animation:cursor 1.1s steps(1,end) infinite}
+    </style>
+  </defs>
+  <rect width="1280" height="380" fill="url(#bg)"/><rect width="1280" height="380" fill="url(#mosaic)" opacity=".82"/>
+  <rect x="88" y="46" width="1104" height="288" rx="24" fill="#171722" filter="url(#shadow)"/>
+  <rect x="112" y="70" width="508" height="240" rx="16" fill="url(#panel)" stroke="#62e6ef" stroke-opacity=".65" stroke-width="2"/>
+  <rect x="660" y="70" width="508" height="240" rx="16" fill="url(#panel)" stroke="#df1837" stroke-opacity=".65" stroke-width="2"/>
+  <text x="152" y="124" class="mono label" fill="#62e6ef">BOOT SCREEN</text>
+  <g class="mono term" fill="#fff7ec"><text x="152" y="176">READY.</text><text x="152" y="216">LOAD "PROFILE",8,1</text><text x="152" y="256">RUN</text><text x="152" y="296">&gt; USER: memoryDemo</text><rect x="476" y="273" width="14" height="28" fill="#62e6ef" class="cursor"/></g>
+  <text x="700" y="124" class="mono label" fill="#ff5867">PLAYER CARD</text>
+  <text x="914" y="178" text-anchor="middle" class="cn" font-size="44" font-weight="850" fill="#fff7ec">逻迦子</text>
+  <text x="914" y="218" text-anchor="middle" class="mono label" fill="#ff5867">memoryDemo</text>
+  <path d="M746 244H1082" stroke="#62e6ef" stroke-opacity=".36" stroke-width="2" stroke-dasharray="14 12"/>
+  <text x="914" y="282" text-anchor="middle" class="cn" font-size="22" font-weight="700" fill="#62e6ef">硅砚耕云，码间生墨</text>
+</svg>
