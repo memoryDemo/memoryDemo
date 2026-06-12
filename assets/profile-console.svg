@@ -1,132 +1,281 @@
-<svg width="1280" height="520" viewBox="0 0 1280 520" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">memoryDemo cyberpunk red-white 8-bit console banner</title>
-  <desc id="desc">A cyberpunk city rendered inside a red and warm white 8-bit console interface.</desc>
+<svg width="1280" height="1760" viewBox="0 0 1280 1760" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">memoryDemo cyberpunk famicom animated profile</title>
+  <desc id="desc">A full cyberpunk red-white 8-bit console profile page with animated scanlines, neon city, cartridge, controller lights, and terminal panels.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="520" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#10101b"/>
-      <stop offset="0.45" stop-color="#191426"/>
-      <stop offset="1" stop-color="#070a12"/>
+    <linearGradient id="pageBg" x1="0" y1="0" x2="1280" y2="1760" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#070812"/>
+      <stop offset="0.34" stop-color="#151126"/>
+      <stop offset="0.66" stop-color="#0b101e"/>
+      <stop offset="1" stop-color="#05050a"/>
     </linearGradient>
-    <linearGradient id="screen" x1="210" y1="94" x2="1070" y2="398" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#08111f"/>
-      <stop offset="0.5" stop-color="#15172d"/>
-      <stop offset="1" stop-color="#070a12"/>
-    </linearGradient>
-    <linearGradient id="neonRed" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#ff4c5f"/>
-      <stop offset="1" stop-color="#d61135"/>
+    <linearGradient id="red" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff5b69"/>
+      <stop offset="0.52" stop-color="#ff274a"/>
+      <stop offset="1" stop-color="#b9072e"/>
     </linearGradient>
     <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#65f7ff"/>
-      <stop offset="1" stop-color="#009dff"/>
+      <stop offset="0" stop-color="#78fbff"/>
+      <stop offset="1" stop-color="#00a7ff"/>
     </linearGradient>
-    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="4" result="blur"/>
-      <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0.9  0 1 0 0 0.05  0 0 1 0 0.2  0 0 0 0.8 0" result="redGlow"/>
-      <feMerge>
-        <feMergeNode in="redGlow"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-    <filter id="blueGlow" x="-30%" y="-30%" width="160%" height="160%">
+    <linearGradient id="screen" x1="170" y1="118" x2="1110" y2="490" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#050916"/>
+      <stop offset="0.55" stop-color="#11142a"/>
+      <stop offset="1" stop-color="#03050c"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#19152b"/>
+      <stop offset="0.55" stop-color="#0d1020"/>
+      <stop offset="1" stop-color="#080914"/>
+    </linearGradient>
+    <filter id="redGlow" x="-25%" y="-25%" width="150%" height="150%">
       <feGaussianBlur stdDeviation="5" result="blur"/>
-      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0  0 0.8 0 0 0.85  0 0 1 0 1  0 0 0 0.75 0" result="cyanGlow"/>
+      <feColorMatrix in="blur" type="matrix" values="1 0 0 0 1  0 0.1 0 0 0.05  0 0 0.2 0 0.1  0 0 0 0.9 0"/>
       <feMerge>
-        <feMergeNode in="cyanGlow"/>
+        <feMergeNode/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
-    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
-      <path d="M32 0H0V32" stroke="#fff7f1" stroke-opacity="0.08" stroke-width="1"/>
+    <filter id="cyanGlow" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0  0 0.95 0 0 0.9  0 0 1 0 1  0 0 0 0.85 0"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" stroke="#eef7ff" stroke-opacity="0.07" stroke-width="1"/>
     </pattern>
-    <pattern id="scanline" width="8" height="8" patternUnits="userSpaceOnUse">
-      <rect width="8" height="2" fill="#fff7f1" fill-opacity="0.05"/>
+    <pattern id="pixelGrid" width="16" height="16" patternUnits="userSpaceOnUse">
+      <path d="M16 0H0V16" stroke="#00d7ff" stroke-opacity="0.08" stroke-width="1"/>
     </pattern>
+    <pattern id="scan" width="8" height="8" patternUnits="userSpaceOnUse">
+      <rect width="8" height="2" fill="#fff7f1" fill-opacity="0.06"/>
+    </pattern>
+    <clipPath id="screenClip">
+      <rect x="202" y="152" width="876" height="310" rx="4"/>
+    </clipPath>
     <style>
       .mono { font-family: "SFMono-Regular", "Cascadia Mono", "Liberation Mono", "Consolas", monospace; }
-      .title { font-size: 74px; font-weight: 900; letter-spacing: 6px; }
-      .small { font-size: 22px; font-weight: 700; letter-spacing: 3px; }
-      .tiny { font-size: 16px; font-weight: 700; letter-spacing: 2px; }
+      .heavy { font-weight: 900; }
+      .bold { font-weight: 800; }
+      .label { font-size: 22px; letter-spacing: 4px; }
+      .tiny { font-size: 18px; letter-spacing: 2px; }
+      .term { font-size: 24px; letter-spacing: 1px; }
+      .title { font-size: 86px; letter-spacing: 7px; font-weight: 900; }
+      .cn { font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; font-weight: 800; }
+      @keyframes flicker {
+        0%, 100% { opacity: 1; }
+        6% { opacity: .75; }
+        8% { opacity: 1; }
+        13% { opacity: .55; }
+        16% { opacity: 1; }
+        70% { opacity: .9; }
+      }
+      @keyframes blink {
+        0%, 45% { opacity: 1; }
+        46%, 100% { opacity: .12; }
+      }
+      @keyframes dash {
+        from { stroke-dashoffset: 0; }
+        to { stroke-dashoffset: -180; }
+      }
+      @keyframes city {
+        from { transform: translateX(0); }
+        to { transform: translateX(-160px); }
+      }
+      @keyframes cartridge {
+        0%, 16% { transform: translateY(-76px); }
+        30%, 100% { transform: translateY(0); }
+      }
+      @keyframes scanmove {
+        from { transform: translateY(-32px); }
+        to { transform: translateY(32px); }
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: .45; }
+        50% { opacity: 1; }
+      }
+      @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-8px); }
+      }
+      .flicker { animation: flicker 3.6s infinite steps(2, end); }
+      .blink { animation: blink 1s infinite steps(1, end); }
+      .dash { stroke-dasharray: 18 14; animation: dash 6s linear infinite; }
+      .cityLoop { animation: city 9s linear infinite; transform-box: fill-box; }
+      .cartMove { animation: cartridge 4.8s infinite cubic-bezier(.22,.8,.26,1); transform-box: fill-box; transform-origin: center; }
+      .scanMove { animation: scanmove 2s linear infinite; }
+      .pulse { animation: pulse 1.35s infinite ease-in-out; }
+      .float { animation: float 4s infinite ease-in-out; }
     </style>
   </defs>
 
-  <rect width="1280" height="520" fill="url(#bg)"/>
-  <rect width="1280" height="520" fill="url(#grid)"/>
+  <rect width="1280" height="1760" fill="url(#pageBg)"/>
+  <rect width="1280" height="1760" fill="url(#grid)"/>
+  <path d="M-80 1180C160 990 268 1334 522 1120C778 904 938 1116 1360 824" stroke="#00d7ff" stroke-opacity="0.2" stroke-width="3" class="dash"/>
+  <path d="M-80 380C180 210 336 522 594 326C810 162 1020 274 1360 122" stroke="#ff3655" stroke-opacity="0.22" stroke-width="3" class="dash"/>
 
-  <g opacity="0.7">
-    <rect x="40" y="56" width="44" height="44" fill="#ff3048"/>
-    <rect x="96" y="56" width="18" height="18" fill="#fff7f1"/>
-    <rect x="1180" y="422" width="38" height="38" fill="#00d7ff"/>
-    <rect x="1230" y="422" width="14" height="14" fill="#fff7f1"/>
-    <rect x="1124" y="70" width="28" height="28" fill="#f23b4f"/>
-    <rect x="1164" y="70" width="28" height="28" fill="#fff7f1"/>
+  <g opacity="0.88">
+    <rect x="56" y="64" width="56" height="56" fill="#ff2d4f"/>
+    <rect x="126" y="64" width="20" height="20" fill="#fff7f1"/>
+    <rect x="1154" y="86" width="42" height="42" fill="#fff7f1" opacity="0.58"/>
+    <rect x="1096" y="92" width="30" height="30" fill="#00d7ff"/>
+    <rect x="82" y="1552" width="40" height="40" fill="#00d7ff"/>
+    <rect x="1140" y="1568" width="58" height="58" fill="#ff2d4f"/>
+    <rect x="1212" y="1568" width="18" height="18" fill="#fff7f1"/>
   </g>
 
-  <rect x="116" y="44" width="1048" height="432" rx="34" fill="#fff7f1"/>
-  <rect x="138" y="66" width="1004" height="388" rx="22" fill="#d9d2c6"/>
-  <rect x="166" y="92" width="948" height="336" rx="14" fill="#f23b4f"/>
-  <rect x="210" y="94" width="860" height="304" rx="10" fill="url(#screen)" stroke="#fff7f1" stroke-width="8"/>
-  <rect x="210" y="94" width="860" height="304" rx="10" fill="url(#scanline)"/>
-
-  <g opacity="0.6">
-    <path d="M224 367H1056" stroke="#00d7ff" stroke-width="2"/>
-    <path d="M266 318L320 272L375 318L430 248L492 318L548 282L608 318L664 238L731 318L784 280L846 318L910 250L1016 318" stroke="#ff4c5f" stroke-width="3" filter="url(#glow)"/>
-    <path d="M250 354L344 314L438 354L548 292L654 354L752 306L842 354L962 292L1038 354" stroke="#00d7ff" stroke-width="2" filter="url(#blueGlow)"/>
+  <g filter="url(#softShadow)">
+    <rect x="82" y="74" width="1116" height="560" rx="38" fill="#fff7f1"/>
+    <rect x="108" y="100" width="1064" height="508" rx="28" fill="#d6d0c5"/>
+    <rect x="138" y="136" width="1004" height="410" rx="16" fill="url(#red)"/>
+    <rect x="188" y="138" width="904" height="338" rx="10" fill="#fff7f1"/>
+    <rect x="202" y="152" width="876" height="310" rx="4" fill="url(#screen)"/>
+    <rect x="202" y="152" width="876" height="310" rx="4" fill="url(#pixelGrid)"/>
+    <g class="scanMove">
+      <rect x="202" y="120" width="876" height="374" fill="url(#scan)"/>
+    </g>
   </g>
 
-  <g>
-    <rect x="256" y="254" width="38" height="114" fill="#17111f"/>
-    <rect x="305" y="224" width="42" height="144" fill="#23192d"/>
-    <rect x="358" y="190" width="54" height="178" fill="#17111f"/>
-    <rect x="426" y="238" width="48" height="130" fill="#21162b"/>
-    <rect x="492" y="170" width="72" height="198" fill="#17111f"/>
-    <rect x="584" y="212" width="52" height="156" fill="#21162b"/>
-    <rect x="654" y="146" width="78" height="222" fill="#17111f"/>
-    <rect x="752" y="230" width="56" height="138" fill="#21162b"/>
-    <rect x="830" y="178" width="70" height="190" fill="#17111f"/>
-    <rect x="920" y="246" width="48" height="122" fill="#21162b"/>
-    <rect x="986" y="202" width="42" height="166" fill="#17111f"/>
+  <g class="cartMove">
+    <rect x="522" y="34" width="236" height="116" rx="12" fill="#f8efe4" stroke="#ff3655" stroke-width="8"/>
+    <rect x="548" y="58" width="184" height="48" rx="6" fill="#151222"/>
+    <text x="640" y="90" text-anchor="middle" class="mono tiny bold" fill="#00d7ff">8-BIT CART</text>
+    <rect x="578" y="126" width="124" height="22" fill="#252131"/>
   </g>
 
-  <g fill="#fff7f1" opacity="0.85">
-    <rect x="270" y="274" width="10" height="10"/>
-    <rect x="270" y="300" width="10" height="10"/>
-    <rect x="322" y="246" width="10" height="10"/>
-    <rect x="376" y="218" width="10" height="10"/>
-    <rect x="376" y="244" width="10" height="10"/>
-    <rect x="514" y="198" width="10" height="10"/>
-    <rect x="514" y="224" width="10" height="10"/>
-    <rect x="676" y="178" width="10" height="10"/>
-    <rect x="676" y="204" width="10" height="10"/>
-    <rect x="856" y="202" width="10" height="10"/>
-    <rect x="942" y="272" width="10" height="10"/>
-    <rect x="1002" y="230" width="10" height="10"/>
+  <g clip-path="url(#screenClip)">
+    <g class="cityLoop">
+      <rect x="238" y="308" width="52" height="116" fill="#171221"/>
+      <rect x="304" y="268" width="64" height="156" fill="#21172d"/>
+      <rect x="384" y="234" width="82" height="190" fill="#16111f"/>
+      <rect x="484" y="280" width="58" height="144" fill="#25172f"/>
+      <rect x="560" y="212" width="92" height="212" fill="#15101f"/>
+      <rect x="670" y="264" width="68" height="160" fill="#25172f"/>
+      <rect x="758" y="226" width="88" height="198" fill="#15101f"/>
+      <rect x="864" y="286" width="70" height="138" fill="#25172f"/>
+      <rect x="952" y="246" width="74" height="178" fill="#15101f"/>
+      <rect x="1044" y="314" width="52" height="110" fill="#25172f"/>
+      <rect x="1124" y="308" width="52" height="116" fill="#171221"/>
+      <rect x="1190" y="268" width="64" height="156" fill="#21172d"/>
+    </g>
+    <g class="cityLoop" transform="translate(1016 0)">
+      <rect x="238" y="308" width="52" height="116" fill="#171221"/>
+      <rect x="304" y="268" width="64" height="156" fill="#21172d"/>
+      <rect x="384" y="234" width="82" height="190" fill="#16111f"/>
+      <rect x="484" y="280" width="58" height="144" fill="#25172f"/>
+      <rect x="560" y="212" width="92" height="212" fill="#15101f"/>
+      <rect x="670" y="264" width="68" height="160" fill="#25172f"/>
+      <rect x="758" y="226" width="88" height="198" fill="#15101f"/>
+      <rect x="864" y="286" width="70" height="138" fill="#25172f"/>
+      <rect x="952" y="246" width="74" height="178" fill="#15101f"/>
+      <rect x="1044" y="314" width="52" height="110" fill="#25172f"/>
+    </g>
+    <path d="M226 392L338 322L450 392L580 272L700 392L812 314L940 392L1046 300" stroke="#00d7ff" stroke-width="3" filter="url(#cyanGlow)" class="dash"/>
+    <path d="M230 360L346 300L456 360L576 248L710 360L822 288L952 360L1048 278" stroke="#ff3655" stroke-width="4" filter="url(#redGlow)" class="dash"/>
+    <g fill="#fff7f1" opacity="0.86">
+      <rect x="258" y="332" width="11" height="11"/>
+      <rect x="326" y="292" width="11" height="11"/>
+      <rect x="406" y="258" width="11" height="11"/>
+      <rect x="426" y="282" width="11" height="11"/>
+      <rect x="586" y="238" width="11" height="11"/>
+      <rect x="692" y="288" width="11" height="11"/>
+      <rect x="792" y="252" width="11" height="11"/>
+      <rect x="980" y="272" width="11" height="11"/>
+    </g>
   </g>
 
   <g class="mono">
-    <text x="640" y="168" text-anchor="middle" class="tiny" fill="#00d7ff" filter="url(#blueGlow)">CYBER RED-WHITE DEV CONSOLE</text>
-    <text x="640" y="238" text-anchor="middle" class="title" fill="#fff7f1" stroke="#f23b4f" stroke-width="2" paint-order="stroke" filter="url(#glow)">MEMORYDEMO</text>
-    <text x="640" y="288" text-anchor="middle" class="small" fill="#ff4c5f">INSERT COIN TO BUILD</text>
-    <text x="640" y="336" text-anchor="middle" class="tiny" fill="#fff7f1">AI TOOLING  /  AGENT WORKFLOWS  /  PRODUCT SYSTEMS</text>
+    <text x="640" y="224" text-anchor="middle" class="label bold" fill="#00d7ff" filter="url(#cyanGlow)">CYBER FAMICOM OPERATING SYSTEM</text>
+    <text x="640" y="316" text-anchor="middle" class="title flicker" fill="#fff7f1" stroke="#ff3150" stroke-width="2.5" paint-order="stroke" filter="url(#redGlow)">MEMORYDEMO</text>
+    <text x="640" y="372" text-anchor="middle" class="label bold blink" fill="#ff5b69">PRESS START</text>
+    <text x="640" y="424" text-anchor="middle" class="tiny bold" fill="#fff7f1">AI TOOLING / AGENT WORKFLOWS / PRODUCT SYSTEMS</text>
   </g>
 
   <g>
-    <rect x="238" y="420" width="112" height="28" rx="6" fill="#14121f"/>
-    <rect x="256" y="408" width="28" height="52" rx="2" fill="#262132"/>
-    <rect x="244" y="420" width="52" height="28" rx="2" fill="#262132"/>
-    <rect x="916" y="420" width="42" height="42" rx="21" fill="#f23b4f" filter="url(#glow)"/>
-    <rect x="978" y="420" width="42" height="42" rx="21" fill="#14121f"/>
-    <rect x="1040" y="420" width="42" height="42" rx="21" fill="#00d7ff" filter="url(#blueGlow)"/>
-    <rect x="452" y="426" width="150" height="14" rx="7" fill="#14121f"/>
-    <rect x="628" y="426" width="150" height="14" rx="7" fill="#14121f"/>
+    <rect x="216" y="536" width="116" height="34" rx="7" fill="#151222"/>
+    <rect x="242" y="508" width="32" height="84" rx="3" fill="#282235"/>
+    <rect x="214" y="534" width="88" height="32" rx="3" fill="#282235"/>
+    <text x="274" y="604" text-anchor="middle" class="mono tiny bold" fill="#fff7f1">D-PAD</text>
+    <rect x="460" y="548" width="178" height="18" rx="9" fill="#11101d"/>
+    <rect x="676" y="548" width="178" height="18" rx="9" fill="#11101d"/>
+    <text x="548" y="604" text-anchor="middle" class="mono tiny bold" fill="#151222">SELECT</text>
+    <text x="764" y="604" text-anchor="middle" class="mono tiny bold" fill="#151222">RUN</text>
+    <circle cx="948" cy="558" r="34" fill="#ff3150" filter="url(#redGlow)" class="pulse"/>
+    <circle cx="1030" cy="558" r="34" fill="#121120"/>
+    <circle cx="1112" cy="558" r="34" fill="#00d7ff" filter="url(#cyanGlow)" class="pulse"/>
+    <text x="940" y="624" class="mono tiny bold" fill="#fff7f1">A</text>
+    <text x="1022" y="624" class="mono tiny bold" fill="#fff7f1">B</text>
+    <text x="1080" y="624" class="mono tiny bold" fill="#fff7f1">START</text>
   </g>
 
-  <g class="mono">
-    <text x="262" y="448" class="tiny" fill="#fff7f1">D-PAD</text>
-    <text x="912" y="492" class="tiny" fill="#fff7f1">A</text>
-    <text x="977" y="492" class="tiny" fill="#fff7f1">B</text>
-    <text x="1037" y="492" class="tiny" fill="#fff7f1">START</text>
-    <text x="472" y="462" class="tiny" fill="#14121f">SELECT</text>
-    <text x="658" y="462" class="tiny" fill="#14121f">RUN</text>
+  <g class="float">
+    <rect x="90" y="692" width="1100" height="190" rx="18" fill="url(#card)" stroke="#ff3655" stroke-opacity="0.9" stroke-width="2"/>
+    <path d="M112 828H1168" stroke="#00d7ff" stroke-opacity="0.35" stroke-width="2" class="dash"/>
+    <text x="640" y="770" text-anchor="middle" class="cn" font-size="48" fill="#fff7f1">逻迦子</text>
+    <text x="640" y="822" text-anchor="middle" class="mono label bold" fill="#ff4d62">memoryDemo</text>
+    <text x="640" y="860" text-anchor="middle" class="cn" font-size="24" fill="#00d7ff">硅砚耕云，码间生墨</text>
+  </g>
+
+  <g>
+    <rect x="90" y="928" width="526" height="316" rx="16" fill="url(#card)" stroke="#00d7ff" stroke-opacity="0.65" stroke-width="2"/>
+    <rect x="664" y="928" width="526" height="316" rx="16" fill="url(#card)" stroke="#ff3655" stroke-opacity="0.65" stroke-width="2"/>
+    <text x="128" y="988" class="mono label bold" fill="#00d7ff">BOOT SCREEN</text>
+    <text x="702" y="988" class="mono label bold" fill="#ff4d62">CARTRIDGE SLOTS</text>
+    <g class="mono term" fill="#fff7f1">
+      <text x="128" y="1048">READY.</text>
+      <text x="128" y="1090">LOAD "PROFILE",8,1</text>
+      <text x="128" y="1132">RUN</text>
+      <text x="128" y="1174">&gt; USER: memoryDemo</text>
+      <text x="128" y="1216">&gt; MOTTO: 硅砚耕云，码间生墨</text>
+    </g>
+    <g class="mono bold">
+      <rect x="704" y="1032" width="178" height="46" rx="6" fill="#ff3655"/>
+      <text x="793" y="1063" text-anchor="middle" font-size="22" fill="#fff7f1">AI TOOLING</text>
+      <rect x="902" y="1032" width="230" height="46" rx="6" fill="#151222" stroke="#00d7ff" stroke-width="2"/>
+      <text x="1017" y="1063" text-anchor="middle" font-size="22" fill="#00d7ff">AGENT FLOW</text>
+      <rect x="704" y="1102" width="222" height="46" rx="6" fill="#151222" stroke="#ff3655" stroke-width="2"/>
+      <text x="815" y="1133" text-anchor="middle" font-size="22" fill="#ff5b69">PRODUCT OPS</text>
+      <rect x="946" y="1102" width="188" height="46" rx="6" fill="#00d7ff"/>
+      <text x="1040" y="1133" text-anchor="middle" font-size="22" fill="#07101c">FULL STACK</text>
+    </g>
+    <text x="704" y="1206" class="cn" font-size="25" fill="#fff7f1">公开主页只展示方向，不暴露私有仓库细节。</text>
+  </g>
+
+  <g>
+    <rect x="90" y="1292" width="1100" height="300" rx="16" fill="url(#card)" stroke="#fff7f1" stroke-opacity="0.28" stroke-width="2"/>
+    <text x="128" y="1352" class="mono label bold" fill="#fff7f1">CONTROL DECK</text>
+    <g class="mono bold" font-size="24">
+      <rect x="130" y="1398" width="130" height="44" rx="7" fill="#ff3655"/>
+      <text x="195" y="1428" text-anchor="middle" fill="#fff7f1">PYTHON</text>
+      <rect x="278" y="1398" width="168" height="44" rx="7" fill="#00d7ff"/>
+      <text x="362" y="1428" text-anchor="middle" fill="#07101c">TYPESCRIPT</text>
+      <rect x="464" y="1398" width="132" height="44" rx="7" fill="#fff7f1"/>
+      <text x="530" y="1428" text-anchor="middle" fill="#151222">FASTAPI</text>
+      <rect x="614" y="1398" width="128" height="44" rx="7" fill="#151222" stroke="#ff3655" stroke-width="2"/>
+      <text x="678" y="1428" text-anchor="middle" fill="#ff5b69">NEXT.JS</text>
+      <rect x="760" y="1398" width="168" height="44" rx="7" fill="#151222" stroke="#00d7ff" stroke-width="2"/>
+      <text x="844" y="1428" text-anchor="middle" fill="#00d7ff">LLM APPS</text>
+      <rect x="946" y="1398" width="184" height="44" rx="7" fill="#ff3655"/>
+      <text x="1038" y="1428" text-anchor="middle" fill="#fff7f1">WORKFLOWS</text>
+    </g>
+    <g>
+      <rect x="132" y="1492" width="1012" height="52" rx="6" fill="#080a14" stroke="#00d7ff" stroke-opacity="0.5"/>
+      <rect x="132" y="1492" width="644" height="52" rx="6" fill="#00d7ff" opacity="0.86">
+        <animate attributeName="width" values="120;644;900;644;120" dur="5s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="132" y="1492" width="1012" height="52" rx="6" fill="none" stroke="#ff3655" stroke-opacity="0.7" class="dash"/>
+      <text x="640" y="1526" text-anchor="middle" class="mono tiny bold" fill="#fff7f1">NEON BUS: MODEL / TOOL / RUNTIME / UI</text>
+    </g>
+  </g>
+
+  <g>
+    <rect x="90" y="1630" width="1100" height="80" rx="16" fill="#fff7f1"/>
+    <rect x="108" y="1648" width="1064" height="44" rx="8" fill="#151222"/>
+    <text x="640" y="1678" text-anchor="middle" class="mono tiny bold blink" fill="#00d7ff">INSERT COIN  |  PRESS START  |  BUILD THE NEXT SYSTEM</text>
   </g>
 </svg>
