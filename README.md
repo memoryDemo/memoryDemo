@@ -64,3 +64,5 @@ RUN
 <div align="center">
   <pre><code>INSERT COIN  |  PRESS START  |  BUILD THE NEXT SYSTEM</code></pre>
 </div>
+
+<!-- profile-refresh: 2026-06-12 -->
