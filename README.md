@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/retro-hero.svg" width="100%" alt="memoryDemo retro cyber famicom hero" />
+  <img src="./assets/retro-robot-hero-card.png" width="100%" alt="memoryDemo retro robot console hero" />
 </p>
 
 <p align="center">
